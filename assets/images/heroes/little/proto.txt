@@ -1,0 +1,20 @@
+images/heroes/
+pour mt : 
+hero_id : 001
+niveau  : 
+		00 bleu
+		01 violet
+		02 orange (a/b/c/w) resp
+		   (spé 1/2/3/weapon) 
+taille  : 
+		big
+		little
+
+Couleurs de carte :
+weapons : orange (E.H. colors)
+items : purple (EHc)
+summoned : light green (EHc)
+awaken : blue (EHc)
+specialized : red 
+boss : green (same as D3's set item)
+monster : black

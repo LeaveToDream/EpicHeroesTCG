@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head lang="fr">
+    <!-- Main Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Alt Meta Tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Title -->
+    <title>EH-TCG</title>
+
+    <!-- Links css & favicon -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"> <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fancybox/jquery.fancybox-v=2.1.5.css" media="screen"> <!-- Fancybox core CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"> <!-- Custom CSS -->
+    <link rel="icon" href="images/favicon.ico"> <!-- Custom ico -->
+
+  </head>
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav row"> <!-- Do not remove icon class, even if it's useless as fuck in html/css, it's used in javascript -->
+  					<li data-slide="1" class="col-xs-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon fa fa-home"></span> <span class="text">ACCEUIL</span></a></li>
+  					<li data-slide="2" class="col-xs-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon fa fa-plus-circle"></span> <span class="text">ROLES</span></a></li>
+  					<li data-slide="3" class="col-xs-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon fa fa-leaf"></span> <span class="text">CLASSES</span></a></li>
+  					<li data-slide="4" class="col-xs-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon fa fa-shield"></span> <span class="text">HEROES</span></a></li>
+  					<li data-slide="5" class="col-xs-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon fa fa-flask"></span> <span class="text">ITEMS</span></a></li>
+  					<li data-slide="6" class="col-xs-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon fa fa-group"></span> <span class="text">DECKS</span></a></li>
+  				</ul>
+  				<div id="special-menu"  class="row">
+  					<div class="col-sm-2 active-menu"></div>
+  				</div>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav><!-- /Fixed navbar -->
+
+    <!-- === Arrows === -->
+  	<div id="arrows">
+  		<div id="arrow-up" class="disabled"></div>
+  		<div id="arrow-down"></div>
+      <div id="arrow-left" class="disabled visible-lg"></div>
+  		<div id="arrow-right" class="disabled visible-lg"></div>
+  	</div><!-- /.arrows -->
+
+
+    <!-- === Generic Modal === -->
+		<div class="modal fade" id="gmodal" tabindex="-1" role="dialog" aria-labelledby="gmodalTitle">
+		  <div class="modal-dialog" id="gmodalWindow" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h3 class="modal-title" id="gmodalTitle">Modal title</h3>
+		      </div>
+		      <div class="modal-body" id="gmodalContent">Modal content
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+    <!-- Pour utiliser le modal, déclarer for_modal php et live_gmodal en javascript
+    Parser le titre et stocker dans des var en js. Enfin, nevoyer le contenu avec
+    live_gmodal(titleID,contentID) propre.
+    function for_modal($data){
+      $data = addcslashes ($data,"'");
+      $data = addcslashes ($data, '"');
+      return $data ;
+    }
+    $script .= "
+        function live_gmodal(title, content){
+          $('#gmodalTitle').html(title);
+          $('#gmodalContent').html(content);
+          $('#gmodal').modal('toggle')
+          return true ;
+        }";
+    -->
+
+    <!-- === Legacy Mode Button === -->
+    <div id="LegacyToggle">
+      <p>Activer le mode Live ?</p>
+      <label class="switch">
+        <input type="checkbox">
+        <div class="slider"></div>
+      </label>
+      <p>Mode actuel : <span id="state"></span></p>
+    </div>
+
+
+    <!-- === Story Slides === -->
+    <div class="story" id="slide-1" data-slide="1">
+  		<div class="container">
+        <div class="row">
+          Test
+        </div>
+      </div>
+    </div>
+
+    <div class="story" id="slide-2" data-slide="2">
+  		<div class="container">
+        <div class="row typeStart"></div>
+        <div class="row typeTitle">
+          <h1>Roles</h1>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 type heal">
+            <h1>Heal</h1>
+            <i class="fa fa-plus-circle fa-big"></i>
+            <p class="desc">The role of a healer in the group is to heal others when they are hurt or take damage, thus keeping party members alive in order to tank or kill the enemies.
+              The role often requires quick reaction time and steady nerves. The healer is often credited (wrongly or correctly) with good groups and bad. </p>
+          </div>
+          <div class="col-xs-4 type tank">
+            <h1>Tank</h1>
+            <i class="fa fa-shield fa-big"></i>
+            <p class="desc">The role of a tank in the group is to take damage for the group, protecting the others from being attacked.
+              Tanks usually have high health, high armor, and often high Avoidance.
+              Their job is to keep the monster's Threat or attention on them, preventing the monster from attacking others in the group, who are often less armored and less able to take the damage from the monsters (mobs).
+              Tanks are often the leaders of the group, the first ones into a fight and the last ones out.
+              Good tanks can make a very hard dungeon seem easy.</p>
+          </div>
+          <div class="col-xs-4 type dps">
+            <h1>Dps</h1>
+            <i class="fa fa-gavel fa-big"></i>
+            <p class="desc"> The role of DPS is to kill the monsters.
+              This may sound simplistic, but it takes skill and know-how to dish out powerful damage without overwhelming the group's tank and causing the monsters to attack you. </p>
+          </div>
+        </div>
+        <div class="row typeEnd"></div>
+      </div>
+    </div>
+
+    <div class="story" id="slide-3" data-slide="3">
+      <div class="container">
+        <div class="row classeStart"></div>
+    		<div class="row classeBlock">
+          <div class="classeTop borderedBot">
+            <h1>Classes</h1>
+          </div>
+          <div class="classeBody borderedBot">
+            <div class="classe hunter">
+              <a class="classeLink" data-target="#classes" data-slide-to="0">
+                <img src="assets/images/classes/icon-hunter.png"/><br/>
+                <p>Hunter</p>
+              </a>
+            </div>
+            <div class="classe warlock">
+              <a class="carouLink" data-target="#classes" data-slide-to="1">
+                <img src="assets/images/classes/icon-warlock.png"/>
+                <p>Warlock</p>
+              </a>
+            </div>
+            <div class="classe">
+              Mage
+            </div>
+            <div class="classe">
+              Shaman
+            </div>
+            <div class="classe">
+              Rogue
+            </div>
+            <div class="classe">
+              Warrior
+            </div>
+            <div class="classe">
+              Druid
+            </div>
+            <div class="classe">
+              Paladin
+            </div>
+            <div class="classe">
+              Priest
+            </div>
+          </div><!-- /.classeBody -->
+          <div class="classeBody">
+            <div id="classes" class="carousel slide" data-ride="carousel" data-interval="false"><!--#classes-->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  Hunter's description
+                </div>
+                <div class="item">
+                  Warlock's description
+                </div>
+      					<!--<?php
+      	          $first = true ;
+      						foreach($classes as $d) { ?>
+      							<div class="item <?php echo(($first)?'active':'' );?>">
+      								<h2><?php echo $d['title']; ?></h2>
+      								<div id="content<?php echo $d['id']; ?>"><?php echo $d['content']; ?></div>
+                    </div>
+    								<?php
+    	              $first = false ;
+      						}
+      					?>-->
+      	      </div><!--/right-->
+            </div><!--/#classes-->
+          </div><!-- /.classeBody -->
+        </div><!-- /.classeBlock -->
+        <div class="row classeEnd"></div>
+      </div>
+    </div>
+
+    <div class="story" id="slide-4" data-slide="4">
+  		<div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h1>Heroes</h1>
+            <ul class="heroeBlockList">
+              <a class="heroeLink" data-target="#heroes" data-slide-to="0">
+                <li class="heroeList">
+                  <img src="assets/images/source/littlecard_0330.png"/>
+                  Hero 1
+                </li>
+              </a>
+              <hr/>
+              <a class="heroeLink" data-target="#heroes" data-slide-to="1"><li class="heroeList"><img src="assets/images/source/littlecard_0330.png"/> Hero 2</li></a>
+            </ul>
+          </div>
+          <div class="col-sm-9">
+            <div id="heroes" class="carousel slide" data-ride="carousel" data-interval="false"><!--#heroes-->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  First Hero's description :
+                  Nom
+                </div>
+                <div class="item">
+                  Second Hero's description
+                </div>
+      					<!--<?php
+      	          $first = true ;
+      						foreach($heroes as $d) { ?>
+      							<div class="item <?php echo(($first)?'active':'' );?>">
+      								<h2><?php echo $d['title']; ?></h2>
+      								<div id="content<?php echo $d['id']; ?>"><?php echo $d['content']; ?></div>
+                    </div>
+    								<?php
+    	              $first = false ;
+      						}
+      					?>-->
+      	      </div><!--/right-->
+            </div><!--/#heroes-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="story" id="slide-5" data-slide="5">
+  		<div class="container">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div id="bag">
+                <table>
+                  <th class="inventoryTitle" colspan="5">The inventory</th>
+                  <tr><td>Case 1</td> <td>Case 2</td> <td>Case 3</td> <td>Case 4</td> <td>Case 5</td></tr>
+                  <tr><td>Case 6</td> <td>Case 7</td> <td>Case 8</td> <td>Case 9</td> <td>Case 10</td></tr>
+                  <tr><td>Case 11</td> <td>Case 12</td> <td>Case 13</td> <td>Case 14</td> <td>Case 15</td></tr>
+                  <tr><td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+                </table>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div id="item" class="carousel slide" data-ride="carousel" data-interval="false"><!--#item-->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    First item's description
+                  </div>
+                  <div class="item">
+                    Second item's description
+                  </div>
+        					<!--<?php
+        	          $first = true ;
+        						foreach($heroes as $d) { ?>
+        							<div class="item <?php echo(($first)?'active':'' );?>">
+        								<h2><?php echo $d['title']; ?></h2>
+        								<div id="content<?php echo $d['id']; ?>"><?php echo $d['content']; ?></div>
+                      </div>
+      								<?php
+      	              $first = false ;
+        						}
+        					?>-->
+        	      </div><!--/right-->
+              </div><!--/#item-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="story" id="slide-6" data-slide="6">
+  		<div class="container">
+        Decks
+      </div>
+    </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+    <script type="text/javascript" src="assets/js/jqueryEasing.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</html>

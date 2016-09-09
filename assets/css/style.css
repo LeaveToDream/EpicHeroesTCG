@@ -1,0 +1,803 @@
+/** Global Style **/
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: #2f2f2f;
+	font-family: "Titillium Web", sans-serif;
+	font-weight: normal;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+@media (max-width: 767px) {
+  .nav li {
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .navbar-responsive-collapse  {
+    width: 100%;
+  }
+
+  .active-menu {
+    display: none !important;
+  }
+
+  .navbar-toggle {
+    margin-right: 10px;
+  }
+
+  .navbar {
+    background-color: #e4e6e5 !important;
+    padding: 0;
+  }
+
+  .navbar .nav a {
+    color: #e4e6e5;
+    font-size: 16px;
+    padding-left: 0;
+  }
+
+  .icon {
+    margin-right: 12px;
+  }
+}
+.cap {
+	text-transform: capitalize;
+}
+.leftAlign {
+	text-align: left;
+}
+.centerAlign {
+	text-align: center ;
+}
+
+/** Dl Shits >< **/
+.dl-extended dt, .dl-extended dd  {
+	margin-left: 1em ;
+}
+
+@media (min-width: 768px){
+	.dl-classic dt {
+	  width: 4em;
+	}
+	.dl-classic dd {
+	  margin-left: 4.5em;
+	}
+	.dl-extended dt {
+		margin-left: 0 ;
+		width: 10em;
+	}
+	.dl-extended dd {
+		margin-left: 10.5em;
+	}
+}
+.dl-classic,
+.dl-extended {
+	margin-bottom: 0px ;
+}
+
+/** BootStrap Adjustement **/
+.panel-group .panel+.panel {
+    margin-top: 15px;
+}
+
+/** /Global Style **/
+
+
+/** Story Slides' Style **/
+.story {
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-align: center;
+  color: #e4e6e5;
+	padding-top : 4em ;
+	padding-bottom: 10em ;
+}
+.title h1{
+	margin-bottom: 2em;
+	font-size: 4em;
+}
+.titleBordered h1 {
+	padding-bottom: 1em;
+	padding-top: 0.6em;
+	font-size: 4em;
+}
+/** /Slides' Style **/
+
+
+/** Navbar's Style **/
+.navbar {
+	background-color: #e4e6e5;
+	background-color: rgba( 228, 230, 229, .85 );
+	border-bottom: 0 none;
+	font-size: 12px;
+	transition: .25s all linear;
+}
+
+.navbar.inv {
+	background-color: rgba( 0, 0, 0, .5 );
+	border-bottom: 1px solid #bfbfbf;
+}
+
+.navbar .nav a {
+	color: #5f5f5f;
+	font-family: "Titillium Web", sans-serif;
+	font-weight: 600;
+	transition: all .5 linear;
+}
+
+.navbar.inv a {
+	color: #e4e6e5;
+}
+
+
+.navbar-responsive-collapse {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.nav li {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+	background-color: inherit;
+	outline: none;
+}
+/** /Navbar's Style **/
+
+
+/** Special Active Menu's Style (except colors, defined in Colorisation ) **/
+#special-menu {
+  position : relative ;
+}
+.active-menu {
+	background-color: #4e4e4e;
+	content: '.';
+	display: block;
+	height: 5px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transition: all .5 linear;
+	width: 1%;
+	z-index: 9;
+}
+
+.inv .active-menu {
+	background-color: #e4e6e5;
+}
+
+.special-active-menu {
+	z-index: 10;
+}
+/** /Special Active Menu's Style **/
+
+
+/** Arrows' Style **/
+#arrows {
+	bottom: 10%;
+	height: 80px;
+	position: fixed;
+	right: 10%;
+	width: 80px;
+	z-index: 1000;
+}
+
+#arrows div {
+	background-image: url('../images/website-arrows.png');
+	cursor: pointer;
+	height: 30px;
+	position: absolute;
+	width: 30px;
+}
+
+#arrows div.disabled {
+	cursor: default;
+}
+
+#arrow-up {
+	background-position: 30px 0;
+	left: 25px;
+	top: 0;
+}
+
+#arrow-up.disabled {
+	background-position: 0 0;
+}
+
+#arrow-down {
+	background-position: 30px -30px;
+	left: 25px;
+	bottom: 0;
+}
+
+#arrow-down.disabled {
+	background-position: 0 -30px;
+}
+
+#arrow-left {
+	background-position: 30px -60px;
+	left: 0;
+	top: 25px;
+}
+
+#arrow-left.disabled {
+	background-position: 0 -60px;
+}
+
+#arrow-right {
+	background-position: 30px -90px;
+	right: 0;
+	top: 25px;
+}
+
+#arrow-right.disabled {
+	background-position: 0 -90px;
+}
+/** /Arrows' Style **/
+
+
+/** Colorisation **/
+  /** Part One : special-active-menu color **/
+  #special-active-menu-1,
+  #special-active-menu-6 {
+  	background-color: #4e4e4e !important;
+  }
+
+  #special-active-menu-2 {
+  	background-color: #1AA6BC !important;
+  }
+
+  #special-active-menu-3 {
+  	background-color: #e74c3c !important;
+  }
+
+  #special-active-menu-4 {
+  	background-color: #34495e !important;
+  }
+
+  #special-active-menu-5 {
+  	background-color: #BB1B18 !important;
+  }
+
+  /** Part Two : xs-menu background color **/
+  @media (max-width: 767px) {
+  	.nav li[data-slide="1"],
+  	.nav li[data-slide="6"] {
+  		background-color: #2f2f2f;
+  	}
+
+  	.nav li[data-slide="2"] {
+  		background-color: #1abc9c;
+  	}
+
+  	.nav li[data-slide="3"] {
+  		background-color: #e74c3c;
+  	}
+
+  	.nav li[data-slide="4"] {
+  		background-color: #34495e;
+  	}
+
+  	.nav li[data-slide="5"] {
+  		background-color: #e67e22;
+  	}
+  }
+
+  /** Part three : Slide Background Color / Paper **/
+
+  #slide-1 {
+  	background-image: url('../images/back.jpg');
+  	color: #ffffff;
+      -webkit-background-size: 100%;
+      -moz-background-size: 100%;
+      -o-background-size: 100%;
+      background-size: 100%;
+
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      width: 100%;
+  	background-attachment: relative;
+  	background-position: center center;
+		height: 1000px;
+  }
+
+  #slide-2 {
+		padding-top:7em;
+  	background-color: #1AA6BC;
+  }
+
+  #slide-3 {
+		padding-top: 7em;
+		background-color: #e74c3c;
+  }
+
+  #slide-4 {
+  	background-color: #34495e;
+  }
+
+  #slide-5 {
+  	background-color: #BB1B18;
+  }
+
+  #slide-6 {
+  	background-color: #2f2f2f;
+  	padding-bottom: 350px;
+  }
+/** /Colorisation **/
+
+/** Legacy Button's Style **/
+#LegacyToggle {
+	transition: 1s ;
+	position : fixed;
+	top: 6em;
+	z-index: 1000;
+	background-color: white;
+	border-radius: 0.5em;
+}
+
+#LegacyDisplayButton {
+	padding: 0.5em;
+	padding-right: 0 ;
+	cursor: pointer;
+}
+
+#LegacyToggleButton {
+	padding-left: 10px;
+	border-left: 1px dotted grey;
+	padding: 0.5em;
+	width : 11em ;
+}
+.LT {
+	right: 2em;
+}
+.LT .LegacyButtonDisplayed {
+	visibility: visible ;
+}
+.LT .LegacyButtonHidden {
+	visibility: hidden ;
+}
+
+.LThidden {
+	right : -11em ;
+}
+.LThidden .LegacyButtonDisplayed {
+	visibility : hidden ;
+}
+.LThidden .LegacyButtonHidden {
+	visibility: visible ;
+	top: -20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+	display:none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+	border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+	border-radius: 50%;
+}
+
+.checked .slider {
+  background-color: #2196F3;
+}
+
+.checked .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.checked .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+#LegacySwitchScreen {
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index : 2000 ;
+}
+.LegacySwitchScreen {
+	display: none;
+}
+.LegacySwitchScreenActive {
+	display : block ;
+}
+
+
+/** /Legacy Button's Style **/
+
+/** Now, slides relatives styles **/
+
+/** Roles / Type **/
+.typeTitle {
+	background-color: azure ;
+	color : #4e4e4e ;
+	border: 2px solid grey ;
+	border-top: 0px;
+}
+.type {
+	background-color: azure ;
+	color : #4e4e4e ;
+	transition: 0.2s;
+	transition-timing-function: ease-out;
+	min-height : 40em ;
+}
+.typeBody {
+	background-color: white ;
+	border: 2px solid grey;
+	border-width: 0 2px ;
+}
+.fa-big {
+	font-size : 8em ;
+}
+.tank {
+	border-left: 2px dotted grey ;
+	border-right: 2px dotted grey ;
+}
+.heal:hover {
+	background-color: #e3e3e3;
+	color : green ;
+}
+.tank:hover {
+	background-color: #e3e3e3;
+	color : blue ;
+}
+.dps:hover {
+	background-color: #e3e3e3;
+	color : red ;
+}
+.dps:hover .desc, .tank:hover .desc, .heal:hover .desc {
+	color : #4e4e4e ;
+}
+.desc {
+	color : lightgrey ;
+	font-size: 1.2em ;
+	transition: 0.2s;
+	transition-timing-function: ease-out;
+}
+.type .desc {
+	padding-top: 2em ;
+}
+
+.descHighlight {
+
+}
+
+.typeStart {
+	border-width: 0 2px;
+	border-style: solid;
+	border-color: grey ;
+	border-image: linear-gradient(to bottom, transparent, grey);
+	border-image-slice: 1;
+	height : 1em;
+	background: linear-gradient(to bottom, transparent, azure); /*Standard*/
+}
+.typeEnd {
+	border-width: 0 2px;
+	border-style: solid;
+	border-color: grey ;
+	border-image: linear-gradient(to top, transparent, grey);
+	border-image-slice: 1;
+	height : 1em;
+	background: linear-gradient(to top, transparent, azure); /*Standard*/
+}
+
+/** /Roles **/
+
+
+/** Classes **/
+
+.classeBlock {
+	color : white ;
+	background: rgb(78, 78, 78);
+}
+.classeTop {
+	border: 2px solid white ;
+	border-top: 0 ;
+}
+.classeTop h1 {
+	margin-top: 0 ;
+}
+.classeBody {
+	border: solid white ;
+	border-width: 0 2px ;
+}
+.classe {
+	display : inline-block;
+	text-align: center;
+	transition: 0s ;
+	width : 8% ;
+	margin : 1% ;
+}
+@media (max-width: 768px){
+	.classe {
+	  width: 17%;
+	}
+}
+.classeName {
+	text-transform: capitalize;
+}
+.classe:hover {
+	cursor: pointer ;
+}
+.classe:hover img {
+	filter: brightness(1.4);
+	-webkit-filter: brightness(1.4);
+}
+.classe a {
+	text-decoration: none;
+}
+.classe img {
+	width: 80px ;
+}
+.druid a, .druid a:hover {
+	color: #ff7c0a !important;
+}
+.hunter a, .hunter a:hover {
+	color: #aad372 !important;
+}
+.mage a, .mage a:hover {
+	color: #68ccef !important;
+}
+.paladin a, .paladin a:hover {
+	color: #f48cba !important;
+}
+.priest a, .priest a:hover {
+	color: #fff !important;
+}
+.rogue a, .rogue a:hover {
+	color: #fff468 !important;
+}
+.shaman a, .shaman a:hover {
+	color: #2359ff !important;
+}
+.warlock a, .warlock a:hover {
+	color: #9382c9 !important;
+}
+.warrior a, .warrior a:hover {
+	color: #c69b6d !important;
+}
+.borderedBot{
+	border-bottom-width: 2px ;
+}
+.classeStart {
+	border-width: 0 2px;
+	border-style: solid;
+	border-color: white ;
+	border-image: linear-gradient(to bottom, transparent, white);
+	border-image-slice: 1;
+	height : 1em;
+	background: linear-gradient(to bottom, transparent, rgb(78, 78, 78)); /*Standard*/
+}
+.classeEnd {
+	border-width: 0 2px;
+	border-style: solid;
+	border-color: white ;
+	border-image: linear-gradient(to top, transparent, white);
+	border-image-slice: 1;
+	height : 1em;
+	background: linear-gradient(to top, transparent, rgb(78, 78, 78)); /*Standard*/
+}
+.presetBlock {
+	margin : 1em ;
+	color : rgb(78, 78, 78);
+	text-align: left ;
+}
+.presetDesc ul {
+	list-style-type: none;
+	padding-left: 10px;
+}
+/** /Classes **/
+
+
+/** Heroes **/
+.heroeBlockList {
+	background-color: white ;
+	border-radius: 5px;
+	list-style-type: none ;
+	padding : 1em ;
+	overflow: auto;
+  height: 50em;
+}
+.heroeBlockList hr {
+	margin: 0 ;
+}
+.heroeList {
+	text-align : left;
+	height : 2.1em;
+	font-size: 1.6em;
+	color : black ;
+}
+.heroeListLittle .heroName {
+	font-size: 0.9em;
+}
+.heroeList img {
+	height : 2em;
+	background-color: black ;
+	border : 2px solid silver ;
+	border-radius: 4px 0;
+}
+.heroeList:hover {
+	cursor: pointer ;
+	background-color: #e3e3e3 ;
+}
+.heroeLink:hover{
+	color : black ;
+	text-decoration: none;
+}
+#heroes {
+	text-align: left ;
+}
+.speLink {
+	cursor: pointer ;
+}
+.speLink:hover, .speLink:focus {
+	text-decoration: none ;
+}
+.spe {
+	color : rgb(78, 78, 78);
+}
+.speHead {
+	margin : 0 ;
+}
+.card {
+	width : 194px;
+	text-align: center;
+	color: black;
+	font-size: 1.2em;
+	margin-left: 1.5em;
+}
+.cardBody {
+	text-align: center ;
+}
+.cardBody img{
+	height : 125px;
+	width : 125px;
+}
+.cardHead img, .itemImgHead img, .weaponImgHead img {
+	background-color: black ;
+	border : 2px solid ;
+	border-radius: 4px 0;
+}
+.cardHead img {
+	border-color : silver ;
+}
+.weaponImgHead img {
+	width: 50px;
+	height: 50px;
+	border-color : orange ;
+}
+.itemImgHead img {
+	width: 50px;
+	height: 50px;
+	border-color: purple ;
+}
+.reverse .list-group-item {
+	background-color: #32383E;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+	color:lightblue;
+}
+/** /Heroes **/
+
+
+/** Items **/
+.inventoryTitle {
+	font-size: 2em;
+	text-align: center;
+}
+.inventoryLink {
+	cursor : pointer ;
+}
+#bag {
+  background-color : #0D0D08 ;
+  border : 6px solid #2B241F ;
+  min-width: 363px;
+}
+#bag table {
+  color : white ;
+  border-collapse: collapse;
+  width : 100%;
+  height : 100%;
+  border: 4px solid #18150C;
+}
+
+#bag th, #bag td {
+  border: 4px solid #18150C;
+}
+#bag td {
+  width : 5em ;
+  height : 5em;
+}
+.inventoryTabNotaLink {
+	padding: 10px 15px;
+}
+.nav-tabs>.float-right {
+	float : right ;
+}
+/** /Items **/
+
+
+/** Decks **/
+
+/** /Decks **/
+
+
+/** Multi **/
+.balance .progress {
+	height : 10px ;
+}
+.lifeBar {
+	background-color: rgb(5, 220, 5) ;
+}
+.magicBar {
+	background-color: blue ;
+}
+.physicBar {
+	background-color : rgb(230, 5, 5) ;
+}
+.healBar {
+  background-color: white;
+	background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, .25) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, .25) 50%, rgba(0, 0, 0, .25) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(45deg, rgba(0, 0, 0, .25) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, .25) 50%, rgba(0, 0, 0, .25) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(0, 0, 0, .25) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, .25) 50%, rgba(0, 0, 0, .25) 75%, transparent 75%, transparent);
+	-webkit-background-size: 40px 40px;
+	background-size: 40px 40px;
+}
+.mixedBar {
+  background-color: purple;
+	background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	-webkit-background-size: 40px 40px;
+	background-size: 40px 40px;
+}
+.balance {
+	margin-top: 1.4em ;
+}
+.balance dd {
+	padding-top: 0.4em ;
+}
+.progress {
+	background-color: rgba(245, 245, 245, 0.7);
+	margin-bottom: 0 ;
+}
+/** /Multi **/
